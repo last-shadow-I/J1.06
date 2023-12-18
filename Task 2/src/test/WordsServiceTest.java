@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class WordsServiceTest {
 
   String[] inputStrings = new String[] {"", "Да; и; но ((4))", "Добрый день!", "сине-зеленый",
           "Чашка9123кофе_____с    молоком без сахара.123", "Эх раз, да еще раз, да еще много-много раз!", """
@@ -21,9 +21,9 @@ class MainTest {
           "IPSUM IRURE LABORE LABORIS LABORUM LOREM MAGNA MINIM MOLLIT NISI NON NOSTRUD NULLA OCCAECAT OFFICIA PARIATUR " +
           "PROIDENT QUI QUIS REPREHENDERIT SED SINT SIT SUNT TEMPOR ULLAMCO VELIT VENIAM VOLUPTATE"};
   @Test
-  void prepareString() {
+  void prepareStringTest() {
     for (int i = 0; i < inputStrings.length; i++) {
-      assertEquals(outputStrings[i], Main.prepareString(inputStrings[i]));
+      assertEquals(outputStrings[i], WordsService.prepareString(inputStrings[i]));
     }
   }
 }
